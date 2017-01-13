@@ -1,0 +1,28 @@
+n = int(input())
+
+
+def EvenOddSort(n):
+    
+    while n >= 0:
+        
+        n -= 1 
+    
+        string = input()
+    
+        oddstring = ""
+        evenstring = ""
+    
+        for letter in string:
+        
+            if string.index(letter) % 2 == 0:
+            
+                evenstring += letter
+            
+            else:
+            
+                oddstring += letter
+            
+        print(evenstring+" "+oddstring)
+        
+EvenOddSort(n)
+            
