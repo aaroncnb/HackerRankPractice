@@ -1,0 +1,35 @@
+class Student(Person):
+    def __init__(self,firstName, lastName, idNum, scores):
+        self.firstName = firstName
+        self.lastName = lastName
+        self.idNumber = idNum
+        self.scores = scores
+
+    def calculate(self):
+
+        def averageGrade(scores):
+            total = 0
+
+            for score in scores:
+                total += score
+            
+            return total/len(scores)
+
+        def letterGrade(average):
+            if 100 >= average >= 90:
+                return "O"
+            elif 90 > average >= 80:
+                return "E"
+            elif 80 > average >= 70:
+                return "A"
+            elif 70 > average >= 55:
+                return "P"
+            elif 55 > average >= 40:
+                return "D"
+            elif average < 40:
+                return "T"
+
+        return letterGrade(averageGrade(self.scores))
+
+
+
